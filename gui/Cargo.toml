@@ -1,0 +1,9 @@
+[package]
+name = "gui"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+iced = { workspace = true, features = ["opengl", "futures"] }
+glow = "0.13.1"
+bytemuck = "1.14.0"

@@ -1,0 +1,6 @@
+[build]
+target-dir = "target/workspace"
+
+[alias]
+check-all = "check --workspace --all-targets"
+clippy-all = "clippy --workspace --all-targets -- -D warnings -W clippy::pedantic"
