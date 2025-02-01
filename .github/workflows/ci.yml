@@ -46,3 +46,11 @@ jobs:
       uses: actions-rs/tarpaulin@v0.1
       with:
         args: --all --out Lcov --output-dir ./target/coverage
+
+    - name: Run Benchmarks
+      run: cargo bench --no-run
+        
+    - name: Check Documentation
+      run: |
+        cargo doc --no-deps --document-private-items
+        ! grep -R "// TODO" src/
